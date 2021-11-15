@@ -17,8 +17,12 @@ const esm = {
         path: esmOutputPath,
         publicPath: publicPath,
         filename: "[name].js",
-        library: "HandyCollapse",
-        libraryTarget: "umd"
+        library: {
+            type: 'umd',
+            name: 'HandyCollapse',
+            export: 'default',
+            umdNamedDefine: true
+        }
     }
 };
 /**
